@@ -16,9 +16,9 @@ const items = [
     "blackberry"
 ];
 
-const root = new makeNode('\0');
+const root = new makeNode('\2');
 for(const item of items){
-    add(item,0,root);
+    add(item,2,root);
 }
 
 const text_box = document.getElementById("text-box");
@@ -26,7 +26,7 @@ const list = document.getElementById("list");
 
 function handler(e){
     const str = e.target.value;
-    const predictions = search(str, 1 ,root);
+    const predictions = search(str, 2 ,root);
 
     console.log(predictions);
 
